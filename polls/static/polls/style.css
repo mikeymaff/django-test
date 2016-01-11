@@ -1,0 +1,280 @@
+html, body {
+	height:100%;
+}
+
+html, body, h1, h2, ul, p {
+	margin:0;
+	padding:0;
+	font-family: Roboto, Arial, sans-serif;
+	font-weight: 100;
+	letter-spacing: 0.7px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#sidebar {
+	float:left;
+	width:200px;
+	background-color: #243238;
+	height:100%;
+}
+
+#sidebar .profile-info {
+	text-align: center;
+	padding:20px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#sidebar .profile-info .pic {
+	width:100px;
+	height:100px;
+	background-image: url("images/twitter-pic.jpg");
+	background-size: cover;
+	border-radius: 50px;
+	display:inline-block;
+	margin-bottom: 10px;
+}
+
+#sidebar .profile-info .name {
+	color:#fff;
+}
+
+#sidebar ul.nav li {
+	border-bottom: 1px solid #243238;
+}
+
+#sidebar ul.nav li a {
+	background-color: #374A52;
+	display: block;
+	padding:20px 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color:#fff;
+}
+
+#sidebar ul.nav li a:hover {
+	background-color: #6B7E86;
+	color:#fff;
+}
+
+#content {
+	width:calc(100% - 200px);
+	float:left;
+	box-shadow: -3px 0px 12px rgba(0, 0, 0, 0.24);
+	height: 100%;
+	background-color: #EEF4F7;
+}
+
+section.hero {
+	background: white url(images/unsplash-mointain-3.jpg) 50% 25%;
+	background-size: cover;
+	height:200px;
+	padding:0 20px;
+	margin-bottom: 80px;
+}
+
+section.hero .profile-pic {
+	width:140px;
+	height:140px;
+	background-image: url(images/Gigareef_logo_300x300_white_bg.png);
+	background-size: cover;
+	float:left;
+	position: relative;
+	top: 100px;
+	box-shadow: 0 0 5px #949494;
+	border: 2px solid #B1B1B1;
+}
+
+section.hero h1 {
+	float:left;
+	color:#fff;
+	position: relative;
+	top: 160px;
+	left: 14px;
+	text-shadow: 0px 0px 7px #000;
+}
+
+section.top-stats {
+	clear:both;
+	padding:0 20px;
+}
+
+section.top-stats ul {
+	display:block;
+	background-color: #fff;
+	height: 116px;
+	border: 2px solid #E0E0E0;
+}
+
+section.top-stats ul li {
+	float:left;
+	width:30%;
+	margin-right:5%;
+	text-align: center;
+	margin-top: -14px;
+}
+
+section.top-stats ul li:last-child {
+	margin-right:0;
+}
+
+section.top-stats ul li .icon {
+	color:#fff;
+	display:inline-block;
+	font-size: 25px;
+	line-height: 50px;
+	width:50px;
+	height:50px;
+	border-radius: 25px;
+	margin-bottom: 10px;
+}
+
+section.top-stats ul li .desc {
+	font-weight: 500;
+}
+
+section.top-stats ul li .number {
+	font-size: 30px;
+}
+
+section.top-stats ul li:nth-child(1) .icon {
+	background-color: #00C5DC;
+}
+
+section.top-stats ul li:nth-child(1) .desc, section.top-stats ul li:nth-child(1) .number {
+	color: #00C5DC;
+}
+
+section.top-stats ul li:nth-child(2) .icon {
+	background-color: #5867C3;
+}
+
+section.top-stats ul li:nth-child(2) .desc, section.top-stats ul li:nth-child(2) .number {
+	color: #5867C3;
+}
+
+section.top-stats ul li:nth-child(3) .icon {
+	background-color: #FF525E;
+}
+
+section.top-stats ul li:nth-child(3) .desc, section.top-stats ul li:nth-child(3) .number {
+	color: #FF525E;
+}
+
+section.ui-cards {
+	clear:both;
+	padding:30px 20px;
+}
+
+section.ui-cards .card {
+	float:left;
+    width: 31.9%;
+    margin-right: 2%;
+	background-color: #fff;
+	margin-bottom: 20px;
+	border: 2px solid #E0E0E0;
+	box-sizing: border-box;
+}
+
+section.ui-cards .card.no-right {
+	margin-right: 0;
+}
+
+section.ui-cards .card h2 {
+	padding: 20px;
+	border-bottom: 2px solid #E0E0E0;
+	font-size: 18px;
+	font-weight: 500;
+	color:#333;
+}
+
+section.ui-cards .card ul {
+	padding: 10px 20px;
+}
+
+section.ui-cards .card ul li {
+	margin-bottom: 4px;
+}
+
+section.ui-cards .card ul li a {
+	color:#5867C3;
+}
+
+section.ui-cards .card .fake-pie-container {
+	padding:10px 20px;
+	width:150px;
+	height:150px;
+	margin:0 auto;
+}
+
+section.ui-cards .card .fake-pie-container .fake-pie {
+	width:150px;
+	height:150px;
+	border-radius: 75px;
+	background-color: #FFAA00;
+	position:relative;
+}
+
+section.ui-cards .card .fake-pie-container .fake-pie .slice {
+	width:75px;
+	height:75px;
+	border-top-left-radius: 75px;
+	background-color: #FFDB03;
+	position:absolute;
+}
+
+section.ui-cards .card .fake-pie-container .fake-pie .center-circle {
+	width:80px;
+	height:80px;
+	border-radius: 40px;
+	background-color: #fff;
+	position:absolute;
+	top: 35px;
+	left: 35px;
+}
+
+section.ui-cards .card ul li.individual i {
+	color:#FFDB03;
+}
+
+section.ui-cards .card ul li.corporate i {
+	color:#FFAA00;
+}
+
+section.ui-cards .card ul li span {
+	font-weight: 500;
+	font-size: 19px;
+}
+
+section.ui-cards .card p {
+	padding: 10px 20px;
+}
+
+section.ui-cards .card p span {
+	color:#FF525E;
+	font-size: 24px;
+}
+
+section.details {
+	padding:0 20px;
+}
+
+section.details .details-inner {
+	background-color: #fff;
+	border: 2px solid #E0E0E0;
+	padding:20px;
+}
+
+section.details h1 {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+
+
+
+
+

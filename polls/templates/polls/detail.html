@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Detail{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+    
+
+    <div class="dashboard">
+        <section class="hero">
+            <div class="profile-pic"></div>
+            <h1 class="profile-name">
+                Gigareef LLC
+            </h1>
+        </section>
+
+        <section class="details">
+        	<div class="details-inner">
+	        	<h1>{{ question.question_text }}</h1>
+	        	<ul>
+	        	{% for choice in question.choice_set.all %}
+	        	    <li>{{ choice.choice_text }}</li>
+	        	{% endfor %}
+	        	</ul>
+        	</div>
+        </section>
+    </div>
+{% endblock %}
+Question.objects.all()[0].choice_set.create(choice_text='These are some details about the Admin Classification', votes=0)

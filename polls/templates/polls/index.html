@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+    
+
+    <div class="dashboard">
+        <section class="hero">
+            <div class="profile-pic"></div>
+            <h1 class="profile-name">
+                Gigareef LLC
+            </h1>
+        </section>
+
+        <section class="top-stats">
+            <ul>
+                <li>
+                    <div class="icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <div class="desc">
+                        ACTIVE USERS
+                    </div>
+                    <div class="number">
+                        29,159
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <div class="desc">
+                        ACTIVE PORTALS
+                    </div>
+                    <div class="number">
+                        470
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <div class="desc">
+                        UPCOMING EVENTS
+                    </div>
+                    <div class="number">
+                        649
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="ui-cards">
+            <div class="card">
+                <h2><i class="fa fa-book"></i> Classifications</h2>
+                {% if latest_question_list %}
+                    <ul>
+                    {% for question in latest_question_list %}
+                        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>
+                        No Classifications Found
+                    </p>
+                {% endif %}
+            </div>
+            <div class="card">
+                <h2><i class="fa fa-pie-chart"></i> Organization Statistics</h2>
+                <div class="fake-pie-container">
+                    <div class="fake-pie">
+                        <div class="slice"></div>
+                        <div class="center-circle"></div>
+                    </div>
+                </div>
+                <ul>
+                    <li class="individual">
+                        <i class="fa fa-circle-o"></i> <span>25%</span> Individual
+                    </li>
+                    <li class="corporate">
+                        <i class="fa fa-circle-o"></i> <span>75%</span> Corporate
+                    </li>
+                </ul>
+            </div>
+            <div class="card no-right">
+                <h2><i class="fa fa-gavel"></i> Pending Requests</h2>
+                <p>
+                    <span>4</span> Involvement Requests
+                </p>
+            </div>
+            <div class="card no-right">
+                <h2><i class="fa fa-bullhorn"></i> Promotions</h2>
+                <p>
+                    <span>2</span> Current
+                </p>
+            </div>
+        </section>
+    </div>
+{% endblock %}
