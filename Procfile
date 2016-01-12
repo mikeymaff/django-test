@@ -1,1 +1,1 @@
-web: gunicorn mysite.wsgi
+web: run python manage.py
