@@ -1,1 +1,1 @@
-web: python manage.py startproject
+web: python manage.py startproject mysite
